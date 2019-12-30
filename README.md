@@ -1,6 +1,6 @@
 # Arknights-autosweeper-python
 
-一个半自动刷关器，使用python瞎编且需要配合adb一起食用。
+一个明日方舟半自动刷关器，使用python瞎编且需要配合adb一起食用。
 目前仅为单设备版，同时连接多个Android设备将会报错。
 多设备版在鸽。
 不支持IOS设备。
