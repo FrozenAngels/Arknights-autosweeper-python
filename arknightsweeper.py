@@ -67,9 +67,9 @@ else:
 			break
 uselessvariable=input("Connect your device to the computer.\nMake sure there is only ONE device connected!\nPress Enter key if you are ready...")
 print('Start sweeping...')
+os.system('adb shell input tap {} {}'.format(actionx,actiony))
 while cnt > 0 :
-	print('{}times left'.format(cnt))
-	os.system('adb shell input tap {} {}'.format(actionx,actiony))
+	print('{}times left'.format(cnt))	
 	time.sleep(3)
 	os.system('adb shell input tap {} {}'.format(startx,starty))
 	time.sleep(1)
