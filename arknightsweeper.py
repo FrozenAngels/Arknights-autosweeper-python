@@ -3,9 +3,6 @@
 import os
 import time
 from configparser import ConfigParser
-def click(x,y):
-	os.system('adb shell input {} {}'.format(x,y))
-	print('clicked specfic button @ ({},{})'.format(x,y))
 
 print('One device adb_based automatic script for Arknights sweeping')
 conf = ConfigParser()
