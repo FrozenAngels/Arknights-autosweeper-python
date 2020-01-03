@@ -29,7 +29,7 @@ if os.path.exists('config.ini') == False:
 else:
 	config=conf.read('config.ini')
 	startx=int(conf.get('buttons','startkeyx'))
-	actionx=int(conf.get('buttons','actionkeyy'))
+	actionx=int(conf.get('buttons','actionkeyx'))
 	starty=int(conf.get('buttons','startkeyy'))
 	actiony=int(conf.get('buttons','actionkeyy'))
 	print('Got existing config...')
@@ -66,11 +66,15 @@ uselessvariable=input("Connect your device to the computer.\nMake sure there is 
 print('Start sweeping...')
 os.system('adb shell input tap {} {}'.format(actionx,actiony))
 while cnt > 0 :
+
 	print('{}times left'.format(cnt))	
+	
 	time.sleep(3)
 	os.system('adb shell input tap {} {}'.format(startx,starty))
+	
 	time.sleep(1)
-	os.system('adb shell input tap {} {}'.format(startx-100,starty-150))
+	os.system('adb shell input tap {} {}'.format(startx-120,starty-150))
+	
 	time.sleep(elapse+5)
 	os.system('adb shell input tap {} {}'.format(233,233))
 	time.sleep(8)
