@@ -80,5 +80,7 @@ while cnt > 0 :
 	time.sleep(8)
 	cnt-=1
 print('Selected sweeping process Completed.Program will be exited.')
-
+os.system(adb shell /system/bin/screencap -p /sdcard/screenshot.png)
+os.system(adb pull /sdcard/screenshot.png ../screenshot/screenshot.png)
+print("screenshot complete.")
 
